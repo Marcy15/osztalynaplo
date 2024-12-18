@@ -13,7 +13,7 @@ function displayDropdownMenu() {
     echo "<option value='averages'>Átlagok</option>";
     echo "</select>";
     echo '<button type="submit" name="newSchool" value="1">Új iskola</button>';
-    if($_SESSION['view'] == "averages") {
+    if(isset($_SESSION['view']) && $_SESSION['view'] == "averages") {
         echo "<br>";
         echo '<button type="submit" name="fDownload" value="1">Osztály Szinten Letöltés</button>';
         echo '<button type="submit" name="sDownload" value="1">Tantárgy Szinten Letöltés</button>';
